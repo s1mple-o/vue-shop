@@ -6,7 +6,6 @@
       <el-breadcrumb-item>活动列表</el-breadcrumb-item>
       </el-breadcrumb>
     <el-card class="box-card">
-    
     <el-row>
       <el-col :span='8'>
         <el-input placeholder="请输入内容" v-model="queryParams.query" class="input-with-select" clearable>
@@ -14,7 +13,7 @@
         </el-input>
       </el-col>
       <el-col :span='16'>
-        <el-button round  @click="addDialogVisible = true">添加用户</el-button>
+        <el-button round  @click="addDialogVisible = true" >添加用户</el-button>
       </el-col>
     </el-row>
 
