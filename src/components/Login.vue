@@ -51,8 +51,7 @@ export default {
                 if(!valid) return false
                 const { data } = await this.$axios.post('login', this.loginForm)
                 if(data.meta.status === 400){
-                    this.$message('登录名或密码错误')
-                    return false
+                    return this.$message('登录名或密码错误')
                 }
                 this.$message('登录成功')
                 window.sessionStorage.setItem('token', data.data.token)

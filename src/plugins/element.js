@@ -26,7 +26,8 @@ import {
     Switch,
     Tooltip,
     Dialog,
-    MessageBox
+    MessageBox,
+    Tag
 } from 'element-ui'
 
 Vue.use(Button)
@@ -54,6 +55,7 @@ Vue.use(Card)
 Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Dialog)
+Vue.use(Tag)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
     /* eslint-disable eol-last */

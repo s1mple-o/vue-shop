@@ -195,8 +195,7 @@
      async getUsersList(){
        const { data:res } = await this.$axios.get('users', { params:this.queryParams })
       if(res.meta.status !== 200){
-        this.$message('获取用户列表错误')
-        return false
+        return this.$message('获取用户列表错误')
       }
       for(const item of res.data.users){
           item.create_time = this.dateFormat(item.create_time, 'yyyy-MM-dd')
@@ -268,7 +267,6 @@
     },
     userModify(formName){
       this.$refs[formName].validate(async (value)=>{
-         console.log(value)
         if(value){
         const { data:res } = await this.$axios.put(`users/${this.modifyUserParams.id}`, this.modifyUserParams)
           if(res.meta.status === 200){
